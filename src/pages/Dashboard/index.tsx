@@ -6,8 +6,7 @@ export default function Dashboard() {
     <Layout>
         <h2>Dashboard Here</h2>
         <div>
-            <Link to={"/dashboard/courses"}>Courses</Link>
-            <Link to={"/dashboard/reports"}>Reports</Link>
+            <Link to={"/dashboard/courses"}>Courses</Link> | <Link to={"/dashboard/reports"}>Reports</Link>
         </div>
         <div>
             <Outlet/>

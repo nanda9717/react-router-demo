@@ -7,6 +7,7 @@ import Location from './pages/Location'
 import Dashboard from './pages/Dashboard'
 import Courses from './pages/Dashboard/Courses'
 import Reports from './pages/Dashboard/Reports'
+import PageNotFound from './pages/PageNotFound'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/find-location/:id",
     element: <Location />
+  },
+  {
+    path: "*",
+    element: <PageNotFound />
   }
 ]);
 
