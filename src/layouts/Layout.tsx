@@ -15,6 +15,9 @@ const Layout: FC<{ children: ReactNode}> = ({children}) => {
                     <li>
                         <NavLink to="/contact" className={({isActive}) => isActive ? "active-link" : "" }>Contact</NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/dashboard" className={({isActive}) => isActive ? "active-link" : "" }>Dashboard</NavLink>
+                    </li>
                 </ul>
             </div>
             <div>

@@ -4,6 +4,9 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Location from './pages/Location'
+import Dashboard from './pages/Dashboard'
+import Courses from './pages/Dashboard/Courses'
+import Reports from './pages/Dashboard/Reports'
 
 const router = createBrowserRouter([
   {
@@ -17,6 +20,20 @@ const router = createBrowserRouter([
   {
     path: '/contact',
     element: <Contact/>
+  },
+  {
+    path: '/dashboard',
+    element: <Dashboard/>,
+    children: [
+      {
+        path: 'courses',
+        element: <Courses />
+      },
+      {
+        path: 'reports',
+        element: <Reports />
+      },
+    ]
   },
   {
     path: "/find-location/:id",
