@@ -8,6 +8,8 @@ import Dashboard from './pages/Dashboard'
 import Courses from './pages/Dashboard/Courses'
 import Reports from './pages/Dashboard/Reports'
 import PageNotFound from './pages/PageNotFound'
+import ProtectedRoute from './utils/ProtectedRoute'
+import Profile from './pages/Profile'
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,10 @@ const router = createBrowserRouter([
         element: <Reports />
       },
     ]
+  },
+  {
+    path: "/profile",
+    element: <ProtectedRoute><Profile /></ProtectedRoute>
   },
   {
     path: "/find-location/:id",
